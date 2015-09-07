@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.springmvc.entity.UserEntity;
 
+import db.DataBase;
 import net.sf.json.JSONObject;
 
 //这一步肯定少不了，前面有介绍就不再介绍了
@@ -30,6 +31,9 @@ public class LoginController
 	// 这时的name和pass可通过 @Pathvariable注解绑定它传过来的值到方法的参数上。
 	public void login(HttpServletResponse response) throws IOException
 	{
+		DataBase db = new DataBase();
+		db.testUpdate();
+		db.coles();
 		response.setContentType("application/json;charset=utf-8");
 		UserEntity entity = new UserEntity();
 		entity.setUsername("admin");
