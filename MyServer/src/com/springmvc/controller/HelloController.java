@@ -16,6 +16,6 @@ public class HelloController
 	@ResponseBody
 	public Object hello()
 	{
-		return "Hello SpringMVC!";
+		return "Hello word";
 	}
 }
